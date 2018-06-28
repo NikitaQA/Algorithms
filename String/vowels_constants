@@ -1,0 +1,10 @@
+int vowel, count = 0;
+char ch[] = str.toCharArray();
+for(char c: ch){
+  if(c == a||e||i||o||u){
+    vowel++;
+  }
+  else{
+    count++;
+  }
+}
