@@ -1,4 +1,4 @@
-// string pallindrom
+// string pallindrome
 
 public class Pallindrome 
 {
@@ -31,7 +31,7 @@ public class Pallindrome
 }
 
 
-// number pallindrom
+// number pallindrome
 public class Pallindrome 
 {
 	public static void main(String[] args) 
