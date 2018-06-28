@@ -4,7 +4,7 @@ public class Pallindrome
 {
 	public static void main(String[] args) 
 	{
-    String s = "arora";
+    		String s = "arora";
 		char[] arr = s.toCharArray();
 		int j=arr.length;
 		int n = (arr.length)/2;
@@ -19,7 +19,7 @@ public class Pallindrome
 		String rev = new String(arr);
 		System.out.println("Reverse: "+rev);
     
-    if(s.equals(rev))
+	    	if(s.equals(rev))
 		{
 			System.out.println("Pallindrome");
 		}
@@ -36,7 +36,7 @@ public class Pallindrome
 {
 	public static void main(String[] args) 
 	{
-    long num = 1221;
+		long num = 1221;
 		long rev = 0;
 		long temp;
 		
@@ -57,6 +57,6 @@ public class Pallindrome
 		{
 			System.out.println("Not a pallindrome");
 		}
-  }
+ 	 }
 }
     
