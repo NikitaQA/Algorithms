@@ -1,0 +1,62 @@
+// string pallindrom
+
+public class Pallindrome 
+{
+	public static void main(String[] args) 
+	{
+    String s = "arora";
+		char[] arr = s.toCharArray();
+		int j=arr.length;
+		int n = (arr.length)/2;
+		
+		for(int i=0;i<n;i++)
+		{
+			char temp = arr[i];
+			arr[i]=arr[j-1-i];
+			arr[j-1-i]=temp;
+		}
+		System.out.println(arr);
+		String rev = new String(arr);
+		System.out.println("Reverse: "+rev);
+    
+    if(s.equals(rev))
+		{
+			System.out.println("Pallindrome");
+		}
+		else
+		{
+			System.out.println("Not a pallindrome");
+		}
+	}
+}
+
+
+// number pallindrom
+public class Pallindrome 
+{
+	public static void main(String[] args) 
+	{
+    long num = 1221;
+		long rev = 0;
+		long temp;
+		
+		temp=num;
+		
+		while(num>0)
+		{
+			rev = rev*10 + num%10;
+			num=num/10;
+		}
+		System.out.println("reverse: "+rev);
+		
+		if(temp==rev)
+		{
+			System.out.println("Pallindrome");
+		}
+		else
+		{
+			System.out.println("Not a pallindrome");
+		}
+  }
+}
+    
