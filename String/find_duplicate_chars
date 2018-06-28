@@ -1,0 +1,29 @@
+class Duplicate{
+  public void findDuplicates(String s){
+    char[] ch = s.toCharArray();
+    HashMap<character> m = new HashMap<Character>();
+    for(char c: ch){
+      if(m.containsKey(c)){
+        m.put(c,m.get(c)+1);
+      }
+      else{
+        m.put(c,1);
+      }
+    }
+    
+    Set s = m.entrySet();
+    Iterator itr = s.iterator();
+    while(itr.hasNext()){
+      Map.Entry mr = (Map.Entry)itr.next();
+      if(mr.getValue()>1){
+        SOP(mr.getKey() + mr.getValue());
+      }
+    }
+  }
+  
+  public static void main(){
+    Duplicate d = new Duplicate();
+    String s = "Nikkita";
+    d.findDuplicate(s);
+  }
+}
