@@ -4,16 +4,16 @@ public static int[] removeDuplicates(int[] numbersWithDuplicates) {
         Arrays.sort(numbersWithDuplicates);     
       
         int[] result = new int[numbersWithDuplicates.length];
-        int previous = numbersWithDuplicates[0];
-        result[0] = previous;
+        int temp = numbersWithDuplicates[0];
+        result[0] = temp;
 
         for (int i = 1; i < numbersWithDuplicates.length; i++) {
             int ch = numbersWithDuplicates[i];
 
-            if (previous != ch) {
+            if (temp != ch) {
                 result[i] = ch;
             }
-            previous = ch;
+            temp = ch;
         }
         return result;
 
