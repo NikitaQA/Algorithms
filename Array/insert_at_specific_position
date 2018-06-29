@@ -1,0 +1,7 @@
+public void insert(int pos, int data){
+  int arr = [1,2,3,4];  // insert 10 at pos 2
+  for(int i = arr.length; i> pos; i--){
+    a[i] = a[i-1];
+  }
+  a[pos] = data;
+}
