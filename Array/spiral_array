@@ -1,0 +1,68 @@
+
+public class SpiralArray 
+{
+	public static final int row = 4;
+	public static final int col = 4;
+	
+	public void printSpArray(int A[][],int row,int col)
+	{
+		int top=0;
+		int bottom=row-1;
+		int left=0;
+		int right=col-1;
+		int direction=0;
+		
+		while(top<=bottom && left<=right)
+		{
+			int i;
+			if(direction==0)
+			{
+				for(i=left;i<=right;i++)
+				{   
+					System.out.println(A[top][i]+" ");					
+				}
+				top++;					
+			}
+			else if(direction==1)
+			{
+				for(i=top;i<=bottom;i++)
+				{
+					System.out.println(A[i][right]+" ");
+				}
+				right--;					
+			}
+			else if(direction==2)
+			{
+				for(i=right;i>=left;i--)
+				{
+					System.out.println(A[bottom][i]+" ");
+				}
+				bottom--;					
+			}
+			else if(direction==3)
+			{
+				for(i=bottom;i>=top;i--)
+				{
+					System.out.println(A[i][left]+" ");
+				}
+				left++;					
+			}
+			direction=(direction+1)%4;
+		}
+		
+	}
+		
+	
+	public static void main(String[] args)
+	{
+		SpiralArray sp= new SpiralArray();
+		
+		int A[][] = {   {1,2,3,4}, 
+				        {5,6,7,8}, 
+				        {9,10,11,12},
+				        {13,14,15,16} };
+
+		sp.printSpArray(A, 4, 4);
+	}
+
+}
