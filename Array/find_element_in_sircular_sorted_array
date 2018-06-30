@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class FindElement 
+{
+	public int FindelementInCSA(int A[],int n,int x)
+	{
+		int low=0;
+		int high=n-1;
+		
+		while(low<=high)
+		{
+			int mid=low+(high-low)/2;
+			if(x == A[mid])
+			{
+				return mid;
+			}
+			else if(A[mid]<=A[high])
+			{
+				if(x>A[mid] && x<=A[high])
+				{
+					low=mid+1;
+				}
+				else
+				{
+					high=mid-1;
+				}
+			}
+			else if(A[low]<=A[mid])
+			{
+				if(x>A[low] && x<=A[mid])
+				{
+					high=mid-1;
+				}
+				else
+				{
+					low=mid+1;
+				}
+			}
+		}
+		return -1;			
+	}
+	
+	public static void main(String[] args)
+	{
+		FindElement f =new FindElement();
+		int A[]={30,31,32,33,34,1,2,3,4,5,6};
+		
+		System.out.println("Enter the element you want to search:");
+		Scanner sc=new Scanner(System.in);
+		int x=sc.nextInt();
+		int index= f.FindelementInCSA(A,11,x);
+		if(index==-1)
+		{
+			System.out.println("Element not Found.");	
+		}
+		else
+		{
+			System.out.println("Element found at "+ index);
+		}
+	}
+
+}
+
+
