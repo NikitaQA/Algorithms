@@ -1,23 +1,23 @@
 // reverse whole string
 
-public class RevString
+public class RevStringg
 {
   public void reverse(String s){
-    char s[]=str.toCharArray();         
-    int n=s.length;
+    char ch[]=s.toCharArray();         
+    int n=ch.length;
     int half=n/2;
     for(int i=0; i<half; i++)
     {
-	char temp = s[i];
-	s[i] = s[n-1-i];
-	s[n-1-i] = temp;
+	char temp = ch[i];
+	ch[i] = ch[n-1-i];
+	ch[n-1-i] = temp;
     }
-    String rstr=new String(s);
+    String rstr=new String(ch);
     System.out.println("Reverse "+rstr);
   }
   
   public static void main(String[] args){
-    RevString rs = new RevString();
+    RevStringg rs = new RevStringg();
     Scanner sc = new Scanner(System.in);
     System.out.println("Enter a string");
     String str = sc.nextLine();
