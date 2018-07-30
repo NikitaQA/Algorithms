@@ -1,7 +1,7 @@
 public class FindBiggestSmallestNumber {
  
         public static void main(String[] args) {
-                int numbers[] = new int[]{33,53,73,94,22,45,23,87,13,63};
+                int numbers[] = {33,53,73,94,22,45,23,87,13,63};
                 int smallest = numbers[0];
                 int biggest = numbers[0];
                
