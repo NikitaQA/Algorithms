@@ -20,7 +20,7 @@ public class Count{
         System.out.println("[");
         for(String strr:keys){
                 
-                System.out.println("{"+strr+":"+m.get(strr)+"},");
+                System.out.println("{"+'"'+strr+'"'+":"+m.get(strr)+"},");
                
         }
     System.out.println("]"); 
@@ -32,6 +32,15 @@ public class Count{
     c.findDuplicates(s);
   }
 }
+
+o/p : [
+{"Labs":1},
+{"data":1},
+{"we?ve":1},
+{"back":1},
+....
+....
+]
 
 -----------------------------------------------------------------------------------------------------------
 javascript:
@@ -51,8 +60,22 @@ var s = "Walmart Technology is reinventing the way the world shops and we’ve o
     }
     console.log("[");
     for(w in wordCounts){
-    console.log("{"+w+":"+wordCounts[w]+"},"); 
+    console.log("{'"+ w +"':"+wordCounts[w]+"}"); 
     }
     console.log("]");
   }
   wordCountFn(s);
+
+o/p:
+
+"["
+"{'Walmart':1}"
+"{'Technology':1}"
+"{'is':1}"
+"{'reinventing':1}"
+"{'the':3}"
+"{'way':1}"
+"{'world':1}"
+....
+....
+"]"
