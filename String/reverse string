@@ -57,3 +57,21 @@ public class RevString
 	rs.reverse(str);    
    }
 }
+
+------------------------------------------------------------------------------
+Javascript:
+function reverse(s){
+    
+    s= s.split("");         
+    var n=s.length;
+    var half=n/2;
+    for(var i=0; i<half; i++)
+    {
+	      var temp = s[i];
+	      s[i] = s[n-1-i];
+	      s[n-1-i] = temp;
+    }
+    s = s.join("");
+    console.log("Reverse "+s);
+  }
+  reverse("abcd efgh");
