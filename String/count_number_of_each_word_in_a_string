@@ -60,7 +60,7 @@ var s = "Walmart Technology is reinventing the way the world shops and we’ve o
     }
     console.log("[");
     for(w in wordCounts){
-    console.log("{'"+ w +"':"+wordCounts[w]+"}"); 
+    console.log("{'"+ w +"':"+wordCounts[w]+"},"); 
     }
     console.log("]");
   }
@@ -69,13 +69,13 @@ var s = "Walmart Technology is reinventing the way the world shops and we’ve o
 o/p:
 
 "["
-"{'Walmart':1}"
-"{'Technology':1}"
-"{'is':1}"
-"{'reinventing':1}"
-"{'the':3}"
-"{'way':1}"
-"{'world':1}"
+"{'Walmart':1},"
+"{'Technology':1},"
+"{'is':1},"
+"{'reinventing':1},"
+"{'the':3},"
+"{'way':1},"
+"{'world':1},"
 ....
 ....
 "]"
